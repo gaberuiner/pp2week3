@@ -1,0 +1,31 @@
+class UpperCase:
+    def getstring(self,string):
+        self.string = string
+    def printstring(string):
+        print(string.upper())
+
+a = input()
+
+UpperCase.printstring(a)
+
+
+
+class Shape():
+    def area(length):
+        print(length*length)
+class square(Shape):
+    def init(length):
+        pass
+    def area(length):
+        print(length*length)
+        
+c = int(input())
+square.area(c)
+
+
+
+
+
+
+
+
