@@ -24,6 +24,91 @@ square.area(c)
 
 
 
+class Shape():
+    def area():
+        a_area = 0
+        print(a_area)
+class square(Shape):
+    def init(length):
+        pass
+    def area(length):
+        print(length*length)
+        
+class Rectangle(Shape):
+    def area(length, width):
+        self_area = length * width
+        print(self_area)
+        
+    
+c = int(input())
+square.area(c)
+
+
+
+class Point():
+    def show(self,x, y):
+        self.x = x
+        self.y = y
+    def move(self,x, y):
+        self.x1 = x + 1
+        self.y1 = y + 1
+        self.x2 = x - 1
+        self.y2 = y - 1
+    def dist(x1, y1, x2, y2):
+        self_dist = (pow(x2 - x1, 2) + pow(y2 - y1, 2))**(0.5)
+        print(self_dist)
+
+
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+        
+Point.dist(a,b,c,d)        
+
+
+
+
+
+class Bank_acc():
+    
+    def owner(self,name,surname):
+        self.name = name
+        self.surname = surname
+    def balance(self, balance):
+        self.balance = balance
+    def deposit(self,deposit):
+        self.balance += deposit
+        print("your deposit is {}, your balance is {}".format(deposit,self.balance))
+    def withdraw(self, withdraw):
+        if withdraw > self.balance:
+            print("your current balance is {}".format(self.balance))
+        else:
+            self.balance = self.balance - withdraw
+            
+
+
+
+class Prime_numbers():
+    def filter(list):
+        for number in list:
+            cnt = 0
+            for i in range(2, (number - 1)):
+                if number % i != 0:
+                    cnt = cnt + 1
+            if number == 2:
+                print(number)
+            if cnt == (number-3):
+                print(number)
+            
+            
+b = list(map(int, input().split(" ")))
+Prime_numbers.filter(b)       
+
+
+
+
+
 
 
 
