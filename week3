@@ -103,7 +103,32 @@ class Prime_numbers():
             
             
 b = list(map(int, input().split(" ")))
-Prime_numbers.filter(b)       
+Prime_numbers.filter(b)   
+
+
+
+def mass(grams):
+    print("ounches =", grams*28.3495231)
+
+grams = int(input())
+mass(grams)
+
+
+
+def temperature(F):
+    print("centrigrade temperature = ",(5/9)*(F-32))
+    
+F = int(input())
+temperature(F)
+
+def puzzle(H, L):
+    for i in range(1, H):
+        if((i*2)+((H-i)*4)== L):
+            print("number of chickens = ", i, "number of rabbits = ", H-i)
+
+H = int(input())
+L =int(input())
+puzzle(H, L)
 
 
 
