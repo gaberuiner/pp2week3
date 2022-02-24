@@ -132,6 +132,141 @@ puzzle(H, L)
 
 
 
+def perm(s):
+    import itertools
+    
+    nums = list(s)
+    permutations = list(itertools.permutations(nums))
+    
+    print(permutations)
+    
+s = input().split(" ")
+perm(s)
+
+
+
+
+def reverse(R):
+    
+    print(R[::-1])
+
+R = input().split(" ")
+reverse(R)
+
+
+def func(num):
+    for i in range(0,len(num)):
+        if num[i] == 0:
+            for x in range(i+1,len(num)):
+                if num[x] == 0:
+                    for y in range(x+1,len(num)):
+                        if num[y] == 7:
+                            return True
+    return False
+
+c = list(map(int, input().split(" ")))
+print(func(c))
+
+
+
+
+def vol(r):
+    print("volume = ", (r**3)*3.14*(4/3))
+
+r = int(input())
+vol(r)
+
+
+
+
+
+def uniq(X):
+  A = []
+  for i in X:
+    if i not in A:
+      A.append(i)
+  return A
+
+X = input().split(" ")
+print(uniq(X))
+
+
+
+
+
+def pal(A):
+    B = A[::-1]
+    if B == A:
+        return True
+    return False
+
+A = input()
+print(pal(A))
+
+
+
+
+def TF(T):
+    for i in range(len(T)-1):
+        if T[i:i+2] == [3,3]:
+            return True
+        
+    return False
+        
+T = list(map(int, input().split(" ")))
+print(TF(T))
+
+
+
+
+
+def star(A):
+    for number in A:
+        for i in range(number):
+            print("*", end = " ")
+        print("\n")
+        
+A = list(map(int,input().split(" ")))
+star(A)
+
+
+
+
+
+
+def guess():
+    import random
+
+    print("Hello what is your name?")
+    name = input()
+    print (("Well, "), name, ( "I am thinking of a number between 1 and 20.\n Take a guess"))
+    
+    number = random.randint(1, 20)
+    
+    tr = 1
+    guesss = int(input())
+    
+    while guesss != number:
+        if guesss < number:
+            print ("Your guess is too low")
+        elif guesss > number:
+            print ("Your guess is too high")
+        print("Take a guess")
+        guesss = int(input())
+        tr += 1
+    
+    print (("Good job "), name, ( "You guessed number in "), tr, ("times"))
+
+guess()
+
+
+
+
+
+
+
+
+
 
 
 
